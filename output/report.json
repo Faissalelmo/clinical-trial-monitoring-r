@@ -1,0 +1,112 @@
+{
+  "data": {
+    "patients_treated": 254,
+    "sites": 17,
+    "adverse_events": 1191,
+    "treatment_emergent": 1122,
+    "patient_years": 79.5,
+    "lab_results": 59580
+  },
+  "study_rates": [
+    {
+      "kri": "TEAE rate per patient-year",
+      "overall": 14.1129
+    },
+    {
+      "kri": "Early discontinuation",
+      "overall": 0.5669
+    },
+    {
+      "kri": "Missing lab results",
+      "overall": 0.0148
+    }
+  ],
+  "flags": [
+    {
+      "site": "705",
+      "kri": "TEAE rate per patient-year",
+      "flag": "low",
+      "value": 4.9258,
+      "study": 14.1129
+    }
+  ],
+  "methods": {
+    "exact": {
+      "false_alarms_on_clean_data": 4,
+      "watch_on_clean_data": 5,
+      "sites_planted": ["704", "708", "709", "710", "718"],
+      "detection": [
+        {
+          "share": 0.25,
+          "runs": 100,
+          "alert": 0.16,
+          "alert_or_watch": 0.55
+        },
+        {
+          "share": 0.5,
+          "runs": 100,
+          "alert": 0.8,
+          "alert_or_watch": 0.83
+        },
+        {
+          "share": 0.75,
+          "runs": 100,
+          "alert": 0.99,
+          "alert_or_watch": 1
+        }
+      ]
+    },
+    "adjusted": {
+      "false_alarms_on_clean_data": 0,
+      "watch_on_clean_data": 2,
+      "sites_planted": ["701", "703", "704", "708", "709", "710", "716"],
+      "detection": [
+        {
+          "share": 0.25,
+          "runs": 140,
+          "alert": 0,
+          "alert_or_watch": 0.143
+        },
+        {
+          "share": 0.5,
+          "runs": 140,
+          "alert": 0.05,
+          "alert_or_watch": 0.457
+        },
+        {
+          "share": 0.75,
+          "runs": 140,
+          "alert": 0.279,
+          "alert_or_watch": 1
+        }
+      ]
+    },
+    "resample": {
+      "false_alarms_on_clean_data": 1,
+      "watch_on_clean_data": 0,
+      "sites_planted": ["701", "703", "704", "708", "709", "710", "716", "718"],
+      "detection": [
+        {
+          "share": 0.25,
+          "runs": 160,
+          "alert": 0.038,
+          "alert_or_watch": 0.269
+        },
+        {
+          "share": 0.5,
+          "runs": 160,
+          "alert": 0.488,
+          "alert_or_watch": 0.85
+        },
+        {
+          "share": 0.75,
+          "runs": 160,
+          "alert": 0.9,
+          "alert_or_watch": 0.994
+        }
+      ]
+    }
+  },
+  "overdispersion_phi": 4.83,
+  "draws_per_site_and_share": 20
+}
